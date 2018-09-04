@@ -1,8 +1,9 @@
 {
   "name": "typescript-pro-library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A micro library",
   "main": "build/index.umd.js",
+  "typings": "build/index.d.ts",
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
