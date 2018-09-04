@@ -1,11 +1,15 @@
 import { isBoolean } from './index'
 
-describe('tests for library', () => {
+describe('isBoolean:::', () => {
   it('shoud return the true if the given value is Boolean', () => {
     expect(isBoolean(new Boolean())).toEqual(true)
   })
 
-  it('shoud return the true if the given value is boolean', () => {
+  it('shoud return the true if the given value is true', () => {
+    expect(isBoolean(true)).toEqual(true)
+  })
+
+  it('shoud return the true if the given value is false', () => {
     expect(isBoolean(true)).toEqual(true)
   })
 
