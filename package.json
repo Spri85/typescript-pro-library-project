@@ -4,12 +4,30 @@
   "description": "A micro library",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "precommit": "npm test",
+    "build": "tsc -p tsconfig.json"
   },
   "keywords": [],
   "author": "Paranin Viktor",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^23.3.1",
+    "@types/node": "^10.9.4",
+    "husky": "^0.14.3",
+    "jest": "^23.5.0",
+    "ts-jest": "^23.1.4",
     "typescript": "^3.0.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      ".ts": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": ".*\\.spec\\.ts$"
   }
 }
